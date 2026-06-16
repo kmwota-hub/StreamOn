@@ -1,0 +1,78 @@
+=== /index.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamOn - Live Streaming Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>StreamOn</h1>
+            <p>Your live streaming enhancement tool.</p>
+        </header>
+        <main>
+            <div class="preview-container">
+                <video id="originalVideo" class="video" autoplay></video>
+                <video id="enhancedVideo" class="video" autoplay></video>
+            </div>
+            <div class="controls">
+                <div class="slider-container">
+                    <label for="brightness">Brightness:</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </div>
+                <div class="slider-container">
+                    <label for="contrast">Contrast:</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </div>
+                <div class="slider-container">
+                    <label for="exposure">Exposure:</label>
+                    <input type="range" id="exposure" min="0" max="200" value="100">
+                </div>
+                <div class="slider-container">
+                    <label for="shadows">Shadows:</label>
+                    <input type="range" id="shadows" min="0" max="200" value="100">
+                </div>
+                <div class="slider-container">
+                    <label for="sharpness">Sharpness:</label>
+                    <input type="range" id="sharpness" min="0" max="200" value="100">
+                </div>
+                <div class="slider-container">
+                    <label for="color">Color Correction:</label>
+                    <input type="color" id="color" value="#ffffff">
+                </div>
+                <button id="applyEnhancements">Apply Enhancements</button>
+            </div>
+            <div class="stream-controls">
+                <h2>Streaming Options</h2>
+                <select id="destinationSelect">
+                    <option value="youtube">YouTube Live</option>
+                    <option value="twitch">Twitch</option>
+                    <option value="facebook">Facebook Live</option>
+                    <option value="customRTMP">Custom RTMP</option>
+                </select>
+                <input type="text" id="streamKey" placeholder="Enter Stream Key">
+                <button id="startStream">Start Streaming</button>
+                <button id="stopStream">Stop Streaming</button>
+            </div>
+            <div class="presets">
+                <h2>Enhancement Presets</h2>
+                <button class="preset" data-preset="default">Default</button>
+                <button class="preset" data-preset="night">Night Mode</button>
+                <button class="preset" data-preset="cinematic">Cinematic</button>
+                <button class="preset" data-preset="vibrant">Vibrant</button>
+            </div>
+            <div class="app-update">
+                <h2>App Update</h2>
+                <button id="updateApp">Check for Updates</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 StreamOn. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
